@@ -200,7 +200,7 @@ public class PermissionDialogHelper {
                             } else {
                                 /*应该弹出跳转设置按钮弹窗*/
                                 new AlertDialog.Builder(context).setTitle("权限申请")
-                                        .setMessage("在设置->应用->和多惠->权限中，开启" + mPer.getTitle() + "，否则无法正常使用和多惠应用.")
+                                        .setMessage("在设置->应用->权限中，开启" + mPer.getTitle() + "，否则无法正常使用应用.")
                                         .setNegativeButton("取消", (dialogInterface, which) -> {
                                             callBack.onSingle(mPer.getId(), false);
                                         })
@@ -310,7 +310,7 @@ public class PermissionDialogHelper {
     private void showSetPermission(PermissionBean per, CallBack callBack, int resultCode, DialogCallBack dialog) {
         /*应该弹出跳转设置按钮弹窗*/
         new AlertDialog.Builder(context).setTitle("权限申请")
-                .setMessage("在设置->应用->和多惠->权限中，开启" + per.getTitle() + "，否则无法正常使用和多惠应用.")
+                .setMessage("在设置->应用->权限中，开启" + per.getTitle() + "，否则无法正常使用应用.")
                 .setNegativeButton("取消", (dialogInterface, which) -> {
                     dialog.onDialog();
                 })
